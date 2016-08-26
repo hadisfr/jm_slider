@@ -1,0 +1,100 @@
+/*
+	jm_slider Joomla 3.5+ template
+
+	© Hadi Safari 2016
+	hadisafari76[at]gmail.com
+*/
+#jm_slider{
+	width: 100%;
+	overflow: hidden;
+	/*text-align: center;*/
+	min-height: calc(100vh - 50px);
+	background: linear-gradient(0deg, #242219, #474431);
+	position: relative;
+}
+#jm_slider > ul > li{
+	background: center/cover no-repeat;
+	width: 100%;
+	margin: auto;
+	position: absolute;
+	min-height: calc(100vh - 50px);
+	overflow: hidden;
+	transition: 1s;
+	display: none;
+}
+#jm_slider img{
+	display: none;
+}
+#jm_slider p, #jm_slider h3{
+	margin: 0;
+	font-size: calc(1.5vh + 1.5vw);
+}
+#jm_slider .slider_text{
+	position: absolute;
+	bottom: 6px;
+	z-index: 3;
+	max-height: 30vh;
+	width: 80%;
+	color: #474431;
+}
+#jm_slider .slide_back{
+	height: 60vh;
+	width: 120%;
+	background: rgba(230, 210, 148, 0.7);
+	position: absolute;
+	bottom: -20vh;
+	right: -30%;
+	z-index: 1;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50% 20%;
+	border-bottom-left-radius: 20% 50%;
+}
+#jm_slider > ul > li.active, #jm_slider > ul > li.left, #jm_slider > ul > li.right{
+	display: block;
+}
+#jm_slider > ul > li.active{
+	right: 0;
+	left: 0;
+}
+#jm_slider > ul > li.left, #jm_slider > ul > li.right{
+	z-index: 4;
+}
+#jm_slider > ul > li.left{
+	left: -100%;
+}
+#jm_slider > ul > li.right{
+	right: -100%;
+}
+#jm_slider #jm_slider_leftbtn, #jm_slider #jm_slider_rightbtn{
+	position: absolute;
+	background: #e6d294;
+	color: #474431;
+	opacity: 0.6;
+	width: 35px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	top: 16px;
+	cursor: pointer;
+	transition: 0.5s;
+	z-index: 5;
+}
+#jm_slider #jm_slider_leftbtn:hover, #jm_slider #jm_slider_rightbtn:hover{
+	opacity: 1;
+	width: 45px;
+}
+#jm_slider #jm_slider_leftbtn{
+	left: 0;
+	border-radius: 0 50% 50% 0;
+}
+#jm_slider #jm_slider_rightbtn{
+	right: 0;
+	border-radius: 50% 0 0 50%;
+}
+#jm_slider.withoutbar{
+	min-height: 100vh;
+}
+#jm_slider.withoutbar > ul > li{
+	min-height: 100vh;
+}
